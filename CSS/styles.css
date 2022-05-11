@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+/*--- PRIMARY COLORS ---*/
+--pri-col-1: hsl(225, 100%, 94%);
+--pri-col-2: hsl(245, 75%, 52%);
+
+/*--- NEUTRAL COLORS ---*/
+--neut-col-1: hsl(225, 100%, 98%);
+--neut-col-2: hsl(224, 23%, 55%);
+--neut-col-3: hsl(223, 47%, 23%);
+}
+
+/*--- GLOBAL STYLES ---*/
+html {
+    font-size: 62.5%;
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--pri-col-1);
+}
+
+body {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: var(--neut-col-2);
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--neut-col-3);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--neut-col-3);
+}
+p {
+    font-size: 1.6rem;
+}
+
+@media screen and (min-width: 376px) {
+    body {
+        background-image: url(../images/pattern-background-desktop.svg)
+    }
+
+    h1 {font-size: 2.5rem;}
+}
+
+/*--- CARD STYLES ---*/
+.card {
+    display: flex;
+    background-color: white;
+    margin-bottom: 2rem;
+    flex-direction: column;
+    height: 65%;
+    width: 85%;
+    gap: 2.5rem;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.card p {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+#header-img {
+   border-radius: 20px 20px 0 0;
+   width: 100%;
+   height: auto;
+}
+
+.card-box {
+    display: flex;
+    width: 85%;
+    background-color: var(--neut-col-1);
+    border-radius: 20px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.card-box a {
+    font-size: 1.4rem;
+    margin-left: 2.5rem;
+    color: var(--neut-col-3);
+}
+
+button {
+    width: 80%;
+    font-size: 1.6rem;
+    font-weight: 900;
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+}
+
+.submit {
+    background-color: var(--pri-col-2);
+    color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.cancel {
+    background-color: white;
+}
+
+@media screen and (min-width: 376px) {
+    .card {
+        height: 80%;
+        width: 50%;
+    }
+
+    .card-box {
+        height: 15%;
+        width: 75%;
+    }
+
+    .card-box a {
+        cursor: pointer;
+    }
+
+    .card-box a:hover {
+        color: hsl(223, 47%, 15%);
+    }
+
+    button {
+        height: 8%;
+        width: 75%;
+        cursor: pointer;
+    }
+
+    .submit:hover {
+        background-color: hsl(223, 47%, 40%);
+    }
+}
+/*--- ATTRIBUTION ---*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
